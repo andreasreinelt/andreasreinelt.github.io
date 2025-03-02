@@ -1,0 +1,188 @@
+/* Global Style */
+
+/* Colours for Menu and Sections */
+:root {
+  --color-about: aliceblue;
+  --color-about-hover: lightblue;
+
+  --color-skills: honeydew;
+  --color-skills-hover: palegreen;
+
+  --color-projects: mistyrose;
+  --color-projects-hover: lightpink;
+
+  --color-hospital: lavender;
+  --color-hospital-hover: mediumpurple;
+
+  --color-contact: lightyellow;
+  --color-contact-hover: khaki;
+}
+
+/* Hidden Elements for Language Switch */
+.hidden {
+  display: none;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: darkslategray;
+}
+
+/* Header */
+header {
+  background: rgba(255, 255, 255, 0.9);
+  color: rgb(52, 138, 167);
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  /* Header Title & Subtitle */
+  h1 {
+    color: #348AA7;
+    margin: 0;
+    font-size: 2.5rem;
+  }
+
+  p.subtitle {
+    color: #348AA7;
+    font-style: italic;
+    margin: 0;
+    font-size: 1.2rem;
+  }
+}
+
+/* Navigation */
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+
+  li {
+    margin: 0 15px;
+  }
+
+  li a {
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #000;
+    background-color: transparent;
+  }
+
+  /* Slide-in Underline-Effekt */
+  li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+  }
+
+  li a:hover::after {
+    width: 100%;
+  }
+}
+
+/* Hintergrundfarben für Menüeinträge */
+.nav-menu li.nav-about a {
+  background-color: var(--color-about);
+  color: black;
+}
+
+.nav-menu li.nav-skills a {
+  background-color: var(--color-skills);
+  color: black;
+}
+
+.nav-menu li.nav-projects a {
+  background-color: var(--color-projects);
+  color: black;
+}
+
+.nav-menu li.nav-hospital a {
+  background-color: var(--color-hospital);
+  color: black;
+}
+
+.nav-menu li.nav-contact a {
+  background-color: var(--color-contact);
+  color: black;
+}
+
+/* Hover-Effekte in der Navigation */
+.nav-menu li.nav-about a:hover {
+  background-color: var(--color-about-hover);
+}
+
+.nav-menu li.nav-skills a:hover {
+  background-color: var(--color-skills-hover);
+}
+
+.nav-menu li.nav-projects a:hover {
+  background-color: var(--color-projects-hover);
+}
+
+.nav-menu li.nav-hospital a:hover {
+  background-color: var(--color-hospital-hover);
+}
+
+.nav-menu li.nav-contact a:hover {
+  background-color: var(--color-contact-hover);
+}
+
+/* Section-Hintergründe */
+.about {
+  background: var(--color-about);
+}
+
+.skills {
+  background: var(--color-skills);
+}
+
+.projects {
+  background: var(--color-projects);
+}
+
+.hospital {
+  background: var(--color-hospital);
+}
+
+.contact {
+  background: var(--color-contact);
+}
+
+/* Abschnitt-Design */
+.card {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  margin-top: 20px;
+  padding: 15px;
+  background: black;
+  color: white;
+  text-align: center;
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
