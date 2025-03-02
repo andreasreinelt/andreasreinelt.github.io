@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!-- bundle exec jekyll serve -->
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andreas Reinelt - Software Engineer</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- toggleLanguage Button Style and Script -->
+  <link rel="stylesheet" href="toggleLanguage/style.css">
+  <script src="toggleLanguage/script.js" defer></script>
+
+  <!-- Projekte Galerie CSS -->
+  <link rel="stylesheet" href="projectsGallery/style.css">
+
+</head>
+
+<body>
+  <header>
+    <h1>Andreas Reinelt</h1>
+    <p class="subtitle">Software Engineer | Full Stack Developer</p>
+    <nav>
+      <ul class="nav-menu">
+        <li data-lang="de" class="nav-about"><a href="#about">Über mich</a></li>
+        <li data-lang="en" class="nav-about hidden"><a href="#about">About Me</a></li>
+
+        <li data-lang="de" class="nav-skills"><a href="#skills">Kompetenzen</a></li>
+        <li data-lang="en" class="nav-skills hidden"><a href="#skills">Skills</a></li>
+
+        <li data-lang="de" class="nav-projects"><a href="#projects">Projekte</a></li>
+        <li data-lang="en" class="nav-projects hidden"><a href="#projects">Projects</a></li>
+
+        <li data-lang="de" class="nav-hospital"><a href="#hospital">Krankenpfleger</a></li>
+        <li data-lang="en" class="nav-hospital hidden"><a href="#hospital">Registered Nurse</a></li>
+
+        <li data-lang="de" class="nav-contact"><a href="#contact">Kontakt</a></li>
+        <li data-lang="en" class="nav-contact hidden"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <button id="language-toggle" data-text-de="Switch to English" data-text-en="Wechsel zu Deutsch">
+      <span class="toggle-text"></span>
+    </button>
+
+  </header>
+
+  <main>
+    <section id="about" class="card about">
+      <div class="about-content">
+        <div class="about-text">
+          <h2 data-lang="de">Über mich</h2>
+          <h2 data-lang="en" class="hidden">About Me</h2>
+          <p data-lang="de">
+            Technologie begeistert mich seit jeher. Nach meiner Karriere im Gesundheitswesen habe ich meine Leidenschaft
+            für
+            Softwareentwicklung zum Beruf gemacht. Ich entwickle moderne, skalierbare Webanwendungen mit JavaScript,
+            TypeScript, React.js und Node.js und vielen mehr!
+          </p>
+          <p data-lang="en" class="hidden">
+            Technology has always fascinated me. After my career in healthcare, I turned my passion for software
+            development
+            into a profession. I develop modern, scalable web applications using JavaScript, TypeScript, React.js, and
+            Node.js and many more!
+          </p>
+        </div>
+        <div class="profile-image-wrapper">
+          <img src="images/profile.jpg" alt="Profile Image" class="profile-image">
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="card skills">
+      <h2 data-lang="de">Meine Kompetenzen</h2>
+      <h2 data-lang="en" class="hidden">Skills</h2>
+      <div class="skills-grid">
+        <!-- Frontend -->
+        <div class="skill-block">
+          <h3 data-lang="de">Frontend</h3>
+          <h3 data-lang="en" class="hidden">Frontend</h3>
+          <ul>
+            <li>HTML5, CSS3, Tailwind CSS</li>
+            <li>JavaScript, TypeScript</li>
+            <li>React.js, Angular, Vue.js</li>
+          </ul>
+        </div>
+        <!-- Backend -->
+        <div class="skill-block">
+          <h3 data-lang="de">Backend</h3>
+          <h3 data-lang="en" class="hidden">Backend</h3>
+          <ul>
+            <li>Node.js, Express.js, Koa</li>
+            <li>GraphQL, REST APIs, OAuth2</li>
+            <li>SQL (z. B. PostgreSQL), NoSQL (MongoDB, Redis)</li>
+          </ul>
+        </div>
+        <!-- Tools & Prozesse -->
+        <div class="skill-block">
+          <h3 data-lang="de">Tools &amp; Prozesse</h3>
+          <h3 data-lang="en" class="hidden">Tools &amp; Processes</h3>
+          <ul>
+            <li>Git, GitHub, Docker, CI/CD</li>
+            <li>Agile Development, Unit Testing, End-to-End Testing, API Integration</li>
+            <li>macOS, Windows, Linux</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="card projects">
+      <h2 data-lang="de">Projekte</h2>
+      <h2 data-lang="en" class="hidden">Projects</h2>
+      <div class="projects-grid">
+        <!-- Projekt 1: Placay -->
+        <div class="project-box">
+          <div class="project-header">
+            <a href="https://github.com/andreasreinelt/Placay" target="_blank">
+              <span data-lang="de">Placay</span>
+              <span data-lang="en" class="hidden">Placay</span>
+            </a>
+          </div>
+          <div class="project-gallery">
+            <div class="gallery-track">
+              <div class="gallery-slide">
+                <img src="images/placay1.png" alt="Placay Screenshot 1">
+              </div>
+              <div class="gallery-slide">
+                <img src="images/placay2.png" alt="Placay Screenshot 2">
+              </div>
+              <div class="gallery-slide">
+                <img src="images/placay3.png" alt="Placay Screenshot 3">
+              </div>
+            </div>
+          </div>
+          <div class="project-description">
+            <p data-lang="de">
+              Entdecke Stadt-Highlights und erstelle individuelle Reisepläne. Diese Anwendung ermöglicht interaktive
+              Karten, personalisierte Routen und integriert die Google Maps API für detaillierte Ortsinformationen. <br>
+              <strong>Technologien:</strong> Node.js, Express.js, React.js, MongoDB, Google Maps API, GraphQL.
+            </p>
+            <p data-lang="en" class="hidden">
+              Discover city highlights and create personalized itineraries. This application offers interactive maps,
+              custom route planning, and integrates the Google Maps API for detailed location data. <br>
+              <strong>Technologies:</strong> Node.js, Express.js, React.js, MongoDB, Google Maps API, GraphQL.
+            </p>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/andreasreinelt/Placay" target="_blank">
+              <span data-lang="de">Auf GitHub ansehen</span>
+              <span data-lang="en" class="hidden">View on GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projekt 2: Sellio -->
+        <div class="project-box">
+          <div class="project-header">
+            <a href="https://github.com/andreasreinelt/Sellio" target="_blank">
+              <span data-lang="de">Sellio</span>
+              <span data-lang="en" class="hidden">Sellio</span>
+            </a>
+          </div>
+          <div class="project-gallery">
+            <div class="gallery-track">
+              <img src="images/sellio1.png" alt="Sellio Screenshot 1">
+              <img src="images/sellio2.png" alt="Sellio Screenshot 2">
+              <img src="images/sellio3.png" alt="Sellio Screenshot 3">
+            </div>
+          </div>
+          <div class="project-description">
+            <p data-lang="de">
+              Verkaufe mühelos deine Second-Hand-Artikel. Diese Plattform vereinfacht den Verkauf gebrauchter Produkte
+              durch ein leistungsstarkes Node.js‑Backend und ein intuitives Frontend. <br>
+              <strong>Technologien:</strong> Node.js, Express.js, MongoDB, React.js, REST APIs.
+            </p>
+            <p data-lang="en" class="hidden">
+              Effortlessly sell your second-hand items. This platform simplifies the sale of used products with a robust
+              Node.js backend and an intuitive frontend. <br>
+              <strong>Technologies:</strong> Node.js, Express.js, MongoDB, React.js, REST APIs.
+            </p>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/andreasreinelt/Sellio" target="_blank">
+              <span data-lang="de">Auf GitHub ansehen</span>
+              <span data-lang="en" class="hidden">View on GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projekt 3: Weather Station Dashboard -->
+        <div class="project-box">
+          <div class="project-header">
+            <a href="https://github.com/andreasreinelt/Weather-Station-Dashboard" target="_blank">
+              <span data-lang="de">Weather Station Dashboard</span>
+              <span data-lang="en" class="hidden">Weather Station Dashboard</span>
+            </a>
+          </div>
+          <div class="project-gallery">
+            <div class="gallery-track">
+              <img src="images/weather1.png" alt="Weather Station Screenshot 1">
+              <img src="images/weather2.png" alt="Weather Station Screenshot 2">
+              <img src="images/weather3.png" alt="Weather Station Screenshot 3">
+            </div>
+          </div>
+          <div class="project-description">
+            <p data-lang="de">
+              Ein React‑basiertes Dashboard, das Echtzeitdaten einer Netatmo‑Wetterstation anzeigt. Entwickelt als
+              Senior‑Solo-Projekt, visualisiert es Temperatur, Luftfeuchtigkeit und weitere Umweltdaten. <br>
+              <strong>Technologien:</strong> React.js, Vite, Netatmo API, OAuth2, React Router.
+            </p>
+            <p data-lang="en" class="hidden">
+              A React‑based dashboard that displays real-time data from a Netatmo weather station. Developed as a senior
+              solo project, it visualizes temperature, humidity, and other environmental data. <br>
+              <strong>Technologies:</strong> React.js, Vite, Netatmo API, OAuth2, React Router.
+            </p>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/andreasreinelt/Weather-Station-Dashboard" target="_blank">
+              <span data-lang="de">Auf GitHub ansehen</span>
+              <span data-lang="en" class="hidden">View on GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projekt 4: Batterie Status Minianwendung -->
+        <div class="project-box">
+          <div class="project-header">
+            <a href="https://github.com/andreasreinelt/Batterie-Status-Minianwendung" target="_blank">
+              <span data-lang="de">Batterie Status Minianwendung</span>
+              <span data-lang="en" class="hidden">Battery Status Mini Application</span>
+            </a>
+          </div>
+          <div class="project-gallery">
+            <div class="gallery-track">
+              <img src="images/battery1.png" alt="Battery Status Screenshot 1">
+              <img src="images/battery2.png" alt="Battery Status Screenshot 2">
+              <img src="images/battery3.png" alt="Battery Status Screenshot 3">
+            </div>
+          </div>
+          <div class="project-description">
+            <p data-lang="de">
+              Eine Minianwendung, die den Batteriestatus deines Notebooks anzeigt. Entwickelt als ich 17 war und als es
+              in Windows
+              Vista noch eine Minianwendungen Seitenleiste gab. Zeigt an wie voll (oder leer) der Akku deines Notebooks
+              ist. <br>
+              <strong>Technologien:</strong> JavaScript, HTML, CSS, Windows Minianwendungen API
+            </p>
+            <p data-lang="en" class="hidden">
+              A mini application that displays your notebook's battery status. Developed when I was 17, during the era
+              when Windows Vista still featured a mini applications sidebar, it shows how full (or empty) your
+              notebook's battery is. <br>
+              <strong>Technologies:</strong> JavaScript, HTML, CSS, Windows Sidebar API
+            </p>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/andreasreinelt/Batterie-Status-Minianwendung" target="_blank">
+              <span data-lang="de">Auf GitHub ansehen</span>
+              <span data-lang="en" class="hidden">View on GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hospital" class="card hospital">
+      <div class="hospital-content">
+        <div class="hospital-image-wrapper">
+          <img src="images/hospital_profile.jpg" alt="Hospital Profile Image" class="hospital-profile-image">
+        </div>
+        <div class="hospital-text">
+          <h2 data-lang="de">Gesundheits- und Krankenpfleger</h2>
+          <h2 data-lang="en" class="hidden">Hospital Experience</h2>
+          <p data-lang="de">
+            Über 15 Jahre Erfahrung in diversen Gesundheitseinrichtungen – von Intermediate Care, Notaufnahme und
+            Intensivstation bis hin zu Kardiologie, Orthopädie und chirurgischen Abteilungen. Ich verfüge über
+            umfassende
+            Kenntnisse in der Patientenversorgung und im Umgang mit modernen medizinischen Geräten.
+          </p>
+          <p data-lang="en" class="hidden">
+            Over 15 years of experience in various healthcare institutions – ranging from intermediate care, emergency,
+            and
+            intensive care to cardiology, orthopedics, and surgical departments. I possess extensive expertise in
+            patient
+            care and advanced medical equipment.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="card contact">
+      <h2 data-lang="de">Kontakt</h2>
+      <h2 data-lang="en" class="hidden">Contact</h2>
+      <p><a href="https://linkedin.com/in/andreasreinelt/" target="_blank">LinkedIn</a></p>
+      <p><a href="https://github.com/andreasreinelt/" target="_blank">GitHub</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      &copy; 2025 Andreas Reinelt |
+      <span data-lang="de">Inspiriert von</span>
+      <span data-lang="en" class="hidden">Inspired by</span>
+      <a href="https://github.com/t413/SinglePaged" target="_blank">github.com/t413/SinglePaged</a>
+    </p>
+  </footer>
+</body>
+
+</html>

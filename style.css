@@ -1,0 +1,280 @@
+/* ========== Global Styles ========== */
+
+/* ----- Colors for Menu and Sections ----- */
+:root {
+  --color-about: aliceblue;
+  --color-about-hover: lightblue;
+
+  --color-skills: honeydew;
+  --color-skills-hover: palegreen;
+
+  --color-projects: powderblue;
+  --color-projects-hover: paleturquoise;
+
+  --color-hospital: lavender;
+  --color-hospital-hover: mediumpurple;
+
+  --color-contact: lightyellow;
+  --color-contact-hover: khaki;
+}
+
+/* ----- Hidden Elements for Language Switch ----- */
+.hidden {
+  display: none;
+}
+
+/* ----- Body ----- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: darkslategray;
+}
+
+/* ========== Header ========== */
+header {
+  background: rgba(255, 255, 255, 0.9);
+  color: rgb(52, 138, 167);
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  color: #348AA7;
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p.subtitle {
+  color: #348AA7;
+  font-style: italic;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* ========== Navigation ========== */
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.nav-menu li {
+  margin: 0 15px;
+}
+
+.nav-menu li a {
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #000;
+  background-color: transparent;
+}
+
+/* Slide-in underline effect */
+.nav-menu li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.nav-menu li a:hover::after {
+  width: 100%;
+}
+
+/* Navigation item backgrounds */
+.nav-menu li.nav-about a {
+  background-color: var(--color-about);
+  color: black;
+}
+.nav-menu li.nav-skills a {
+  background-color: var(--color-skills);
+  color: black;
+}
+.nav-menu li.nav-projects a {
+  background-color: var(--color-projects);
+  color: black;
+}
+.nav-menu li.nav-hospital a {
+  background-color: var(--color-hospital);
+  color: black;
+}
+.nav-menu li.nav-contact a {
+  background-color: var(--color-contact);
+  color: black;
+}
+
+/* Navigation item hover effects */
+.nav-menu li.nav-about a:hover {
+  background-color: var(--color-about-hover);
+}
+.nav-menu li.nav-skills a:hover {
+  background-color: var(--color-skills-hover);
+}
+.nav-menu li.nav-projects a:hover {
+  background-color: var(--color-projects-hover);
+}
+.nav-menu li.nav-hospital a:hover {
+  background-color: var(--color-hospital-hover);
+}
+.nav-menu li.nav-contact a:hover {
+  background-color: var(--color-contact-hover);
+}
+
+/* ========== Section Backgrounds ========== */
+.about {
+  background: var(--color-about);
+}
+.skills {
+  background: var(--color-skills);
+}
+.projects {
+  background: var(--color-projects);
+}
+.hospital {
+  background: var(--color-hospital);
+}
+.contact {
+  background: var(--color-contact);
+}
+
+/* ========== Card Layout ========== */
+.card {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== Footer ========== */
+footer {
+  margin-top: 20px;
+  padding: 15px;
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ========== Additional Layouts ========== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.skill-block {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ----- About Section Layout ----- */
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+/* ----- Profile Image Wrapper (Right Side) ----- */
+.profile-image-wrapper {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+  border-radius: 50%;       /* Ensure the container is circular */
+  transition: box-shadow 0.3s ease;
+}
+
+/* ----- Round Profile Image ----- */
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ----- Glow Animation for the Profile Image Wrapper ----- */
+@keyframes glowProfile {
+  from {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(128, 128, 128, 0.2);
+  }
+  to {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7), 0 0 30px rgba(128, 128, 128, 0.5);
+  }
+}
+
+/* Apply the glow on hover */
+.profile-image-wrapper:hover {
+  animation: glowProfile 2s infinite alternate;
+}
+
+/* ----- Hospital Section Content Layout ----- */
+.hospital-content {
+  display: flex;
+  align-items: center;
+}
+
+/* ----- Hospital Profile Image Wrapper (Left Side) ----- */
+.hospital-image-wrapper {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  margin-right: 20px; /* Space between image and text */
+  transition: box-shadow 0.3s ease;
+}
+
+/* ----- Hospital Profile Image ----- */
+.hospital-profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ----- Glow Animation for the Profile Image Wrapper ----- */
+@keyframes glowProfile {
+  from {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(128, 128, 128, 0.2);
+  }
+  to {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7), 0 0 30px rgba(128, 128, 128, 0.5);
+  }
+}
+
+.hospital-image-wrapper:hover {
+  animation: glowProfile 2s infinite alternate;
+}
+
+/* ----- Hospital Text Styling ----- */
+.hospital-text {
+  flex: 1;
+}
