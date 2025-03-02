@@ -200,17 +200,15 @@ footer a {
   margin-right: 20px;
 }
 
-/* ----- Profile Image Wrapper (Right Side) ----- */
 .profile-image-wrapper {
   position: relative;
   width: 150px;
   height: 150px;
   flex-shrink: 0;
-  border-radius: 50%;       /* Ensure the container is circular */
+  border-radius: 50%;
   transition: box-shadow 0.3s ease;
 }
 
-/* ----- Round Profile Image ----- */
 .profile-image {
   width: 100%;
   height: 100%;
@@ -219,7 +217,6 @@ footer a {
   display: block;
 }
 
-/* ----- Glow Animation for the Profile Image Wrapper ----- */
 @keyframes glowProfile {
   from {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(128, 128, 128, 0.2);
@@ -229,7 +226,6 @@ footer a {
   }
 }
 
-/* Apply the glow on hover */
 .profile-image-wrapper:hover {
   animation: glowProfile 2s infinite alternate;
 }
@@ -240,18 +236,16 @@ footer a {
   align-items: center;
 }
 
-/* ----- Hospital Profile Image Wrapper (Left Side) ----- */
 .hospital-image-wrapper {
   position: relative;
   width: 150px;
   height: 150px;
   flex-shrink: 0;
   border-radius: 50%;
-  margin-right: 20px; /* Space between image and text */
+  margin-right: 20px;
   transition: box-shadow 0.3s ease;
 }
 
-/* ----- Hospital Profile Image ----- */
 .hospital-profile-image {
   width: 100%;
   height: 100%;
@@ -260,7 +254,6 @@ footer a {
   display: block;
 }
 
-/* ----- Glow Animation for the Profile Image Wrapper ----- */
 @keyframes glowProfile {
   from {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(128, 128, 128, 0.2);
@@ -274,7 +267,39 @@ footer a {
   animation: glowProfile 2s infinite alternate;
 }
 
-/* ----- Hospital Text Styling ----- */
 .hospital-text {
   flex: 1;
+}
+
+/* ----- Contact Icons Container ----- */
+.contact-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.contact-icons a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.contact-icons a:hover {
+  transform: scale(1.1);
+}
+
+.contact-icons a img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  object-position: center;
+  margin-bottom: 0.5rem;
+}
+
+.contact-icons a span {
+  font-size: 0.9rem;
 }
