@@ -13,6 +13,7 @@
   top: 15px;
   left: 15px;
   z-index: 1000;
+  color: darkgray;
 }
 
 /* Default Navigation Menu */
@@ -84,6 +85,10 @@
     animation: slideIn 0.3s ease-out;
   }
 
+  .nav-menu.closing {
+    animation: slideOut 0.3s ease-in forwards;
+  }
+
   .nav-menu li {
     width: 100%;
     text-align: left;
@@ -102,5 +107,17 @@
   to {
     left: 0;
     opacity: 1;
+  }
+}
+
+/* Slide-out Effect */
+@keyframes slideOut {
+  from {
+    left: 0;
+    opacity: 1;
+  }
+  to {
+    left: -250px;
+    opacity: 0;
   }
 }

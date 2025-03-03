@@ -1,11 +1,33 @@
-document.getElementById("menu-toggle").addEventListener("click", function () {
-  document.querySelector(".nav-menu").classList.toggle("open");
-});
+document.addEventListener("DOMContentLoaded", () => {
+  const menu = document.querySelector(".nav-menu");
+  const menuToggle = document.getElementById("menu-toggle");
 
-document.addEventListener("click", function (event) {
-  var menu = document.querySelector(".nav-menu");
-  var button = document.getElementById("menu-toggle");
-  if (!menu.contains(event.target) && event.target !== button) {
-    menu.classList.remove("open");
-  }
+  menuToggle.addEventListener("click", () => {
+    if (menu.classList.contains("open")) {
+      menu.classList.remove("open");
+      menu.classList.add("closing");
+
+      setTimeout(() => {
+        menu.classList.remove("closing");
+        menu.style.display = "none";
+      }, 300);
+    } else {
+      menu.style.display = "flex";
+      menu.classList.add("open");
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!menu.contains(event.target) && event.target !== menuToggle) {
+      if (menu.classList.contains("open")) {
+        menu.classList.remove("open");
+        menu.classList.add("closing");
+
+        setTimeout(() => {
+          menu.classList.remove("closing");
+          menu.style.display = "none";
+        }, 300);
+      }
+    }
+  });
 });
