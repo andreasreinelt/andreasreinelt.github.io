@@ -1,4 +1,4 @@
-/* ========== Global Styles ========== */
+/* ========== Global Style ========== */
 
 /* ----- Colors for Menu and Sections ----- */
 :root {
@@ -54,64 +54,27 @@ header p.subtitle {
   font-size: 1.2rem;
 }
 
-/* ========== Navigation ========== */
-.nav-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 15px 0;
-}
-
-.nav-menu li {
-  margin: 0 15px;
-}
-
-.nav-menu li a {
-  position: relative;
-  display: inline-block;
-  padding: 5px 10px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  color: #000;
-  background-color: transparent;
-}
-
-/* Slide-in underline effect */
-.nav-menu li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 0;
-  height: 2px;
-  background-color: currentColor;
-  transition: width 0.3s ease;
-}
-
-.nav-menu li a:hover::after {
-  width: 100%;
-}
-
 /* Navigation item backgrounds */
 .nav-menu li.nav-about a {
   background-color: var(--color-about);
   color: black;
 }
+
 .nav-menu li.nav-skills a {
   background-color: var(--color-skills);
   color: black;
 }
+
 .nav-menu li.nav-projects a {
   background-color: var(--color-projects);
   color: black;
 }
+
 .nav-menu li.nav-hospital a {
   background-color: var(--color-hospital);
   color: black;
 }
+
 .nav-menu li.nav-contact a {
   background-color: var(--color-contact);
   color: black;
@@ -121,15 +84,19 @@ header p.subtitle {
 .nav-menu li.nav-about a:hover {
   background-color: var(--color-about-hover);
 }
+
 .nav-menu li.nav-skills a:hover {
   background-color: var(--color-skills-hover);
 }
+
 .nav-menu li.nav-projects a:hover {
   background-color: var(--color-projects-hover);
 }
+
 .nav-menu li.nav-hospital a:hover {
   background-color: var(--color-hospital-hover);
 }
+
 .nav-menu li.nav-contact a:hover {
   background-color: var(--color-contact-hover);
 }
@@ -138,15 +105,19 @@ header p.subtitle {
 .about {
   background: var(--color-about);
 }
+
 .skills {
   background: var(--color-skills);
 }
+
 .projects {
   background: var(--color-projects);
 }
+
 .hospital {
   background: var(--color-hospital);
 }
+
 .contact {
   background: var(--color-contact);
 }
@@ -221,6 +192,7 @@ footer a {
   from {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(128, 128, 128, 0.2);
   }
+
   to {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.7), 0 0 30px rgba(128, 128, 128, 0.5);
   }
@@ -258,6 +230,7 @@ footer a {
   from {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(128, 128, 128, 0.2);
   }
+
   to {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.7), 0 0 30px rgba(128, 128, 128, 0.5);
   }

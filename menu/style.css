@@ -1,0 +1,106 @@
+/* ========== Navigation Style ========== */
+
+/* Menu Colours are in Global Style.css at .nav-menu li.nav-about a and .nav-menu li.nav-about a:hover or on top */
+
+/* Hamburger Menu Button */
+.hamburger-menu {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 1000;
+}
+
+/* Default Navigation Menu */
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.nav-menu li {
+  margin: 0 15px;
+}
+
+.nav-menu li a {
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #000;
+  background-color: transparent;
+}
+
+/* Hover Effect */
+.nav-menu li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.nav-menu li a:hover::after {
+  width: 100%;
+}
+
+/* Responsive Navigation - Mobile View */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0;
+    padding-top: 0;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .nav-menu.open {
+    left: 0;
+    display: flex;
+    animation: slideIn 0.3s ease-out;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+/* Slide-in Effect */
+@keyframes slideIn {
+  from {
+    left: -250px;
+    opacity: 0;
+  }
+
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}

@@ -6,7 +6,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Andreas Reinelt - Software Engineer</title>
+
+  <!-- Global Style File -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Main Menu Style and Script for small screens -->
+  <link rel="stylesheet" href="menu/style.css">
+  <script src="menu/script.js" defer></script>
+
 
   <!-- toggleLanguage Button Style and Script -->
   <link rel="stylesheet" href="toggleLanguage/style.css">
@@ -21,7 +28,13 @@
   <header>
     <h1>Andreas Reinelt</h1>
     <p class="subtitle">Software Engineer | Full Stack Developer</p>
+
+    <!-- Navigation -->
     <nav>
+      <button id="menu-toggle" class="hamburger-menu">
+        &#9776;
+      </button>
+
       <ul class="nav-menu">
         <li data-lang="de" class="nav-about"><a href="#about">Über mich</a></li>
         <li data-lang="en" class="nav-about hidden"><a href="#about">About Me</a></li>
@@ -248,9 +261,9 @@
           </div>
           <div class="project-description">
             <p data-lang="de">
-              Eine Minianwendung, die den Batteriestatus deines Notebooks anzeigt. Entwickelt als ich 17 war und als es
-              in Windows Vista noch eine Minianwendungen Seitenleiste gab. Zeigt an wie voll (oder leer) der Akku deines
-              Notebooks ist. <br>
+              Eine Minianwendung, die den Batteriestatus deines Notebooks anzeigt. Im Alter von 17 Jahren entwickelt,
+              als es in Windows Vista noch eine Minianwendungen-Seitenleiste gab. Zeigt an wie voll (oder leer) der Akku
+              deines Notebooks ist. <br>
               <strong>Technologien:</strong> JavaScript, HTML, CSS, Windows Minianwendungen API
             </p>
             <p data-lang="en" class="hidden">

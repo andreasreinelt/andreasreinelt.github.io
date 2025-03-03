@@ -15,7 +15,7 @@
   font-weight: bold;
   transform: rotate(20deg);
   box-shadow: 0 0 15px rgba(243, 156, 18, 0.7), 0 0 30px rgba(243, 156, 18, 0.5);
-  
+
   animation: glow 2s infinite alternate, shake 3s infinite;
   transition: transform 0.3s, box-shadow 0.3s;
 }
