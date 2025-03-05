@@ -14,6 +14,9 @@
   --color-hospital: lavender;
   --color-hospital-hover: mediumpurple;
 
+  --color-social: mintcream;
+  --color-social-hover: lightcyan;
+
   --color-contact: lightyellow;
   --color-contact-hover: khaki;
 }
@@ -75,6 +78,11 @@ header p.subtitle {
   color: black;
 }
 
+.nav-menu li.nav-social a {
+  background-color: var(--color-social);
+  color: black;
+}
+
 .nav-menu li.nav-contact a {
   background-color: var(--color-contact);
   color: black;
@@ -95,6 +103,10 @@ header p.subtitle {
 
 .nav-menu li.nav-hospital a:hover {
   background-color: var(--color-hospital-hover);
+}
+
+.nav-menu li.nav-social a:hover {
+  background-color: var(--color-social-hover);
 }
 
 .nav-menu li.nav-contact a:hover {
@@ -118,6 +130,10 @@ header p.subtitle {
   background: var(--color-hospital);
 }
 
+.social-media {
+  background: var(--color-social);
+}
+
 .contact {
   background: var(--color-contact);
 }
@@ -129,6 +145,11 @@ header p.subtitle {
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* ========== Footer ========== */
@@ -177,7 +198,7 @@ footer a {
   height: 150px;
   flex-shrink: 0;
   border-radius: 50%;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.5s ease;
 }
 
 .profile-image {
@@ -200,6 +221,7 @@ footer a {
 
 .profile-image-wrapper:hover {
   animation: glowProfile 2s infinite alternate;
+  transform: scale(1.05);
 }
 
 /* ----- Hospital Section Content Layout ----- */
@@ -215,7 +237,7 @@ footer a {
   flex-shrink: 0;
   border-radius: 50%;
   margin-right: 20px;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.5s ease;
 }
 
 .hospital-profile-image {
@@ -238,6 +260,7 @@ footer a {
 
 .hospital-image-wrapper:hover {
   animation: glowProfile 2s infinite alternate;
+  transform: scale(1.05);
 }
 
 .hospital-text {
@@ -275,4 +298,16 @@ footer a {
 
 .contact-icons a span {
   font-size: 0.9rem;
+}
+
+/* ----- Social Media Content Section Layout ----- */
+
+.social-content {
+  display: flex;
+  align-items: center;
+}
+
+.social-text {
+  flex: 1;
+  margin-right: 20px;
 }

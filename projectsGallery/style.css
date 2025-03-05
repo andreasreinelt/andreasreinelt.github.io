@@ -3,7 +3,7 @@
 /* ----- Grid Layout for Project Boxes ----- */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
@@ -50,10 +50,14 @@
   }
 }
 
-/* Always Running Slideshow (Mobile) */
+/* Always Running Slideshow on Mobile */
 @media (max-width: 768px) {
   .gallery-track {
     animation: slide 3s infinite;
+  }
+  /* And no 2x2 Grid on Mobile*/
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 }
 

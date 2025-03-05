@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
+function initLanguageToggle() {
+
   let currentLang = "de";
   const toggle = document.getElementById("language-toggle");
   const toggleText = toggle.querySelector('.toggle-text');
@@ -19,4 +20,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   updateContent();
-});
+}

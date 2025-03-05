@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+function initMenu() {
   const menu = document.querySelector(".nav-menu");
   const menuToggle = document.getElementById("menu-toggle");
 
@@ -43,4 +43,4 @@ document.addEventListener("DOMContentLoaded", () => {
       menu.classList.remove("closing");
     }
   });
-});
+}
