@@ -12,6 +12,10 @@ function initLanguageToggle() {
     const textDe = toggle.getAttribute("data-text-de") || "Switch to English";
     const textEn = toggle.getAttribute("data-text-en") || "Wechsel zu Deutsch";
     toggleText.innerText = currentLang === "de" ? textDe : textEn;
+
+    toggle.setAttribute('data-current-lang', currentLang);
+
+    toggle.dispatchEvent(new CustomEvent('languageChanged', { detail: currentLang }));
   }
 
   toggle.addEventListener("click", () => {

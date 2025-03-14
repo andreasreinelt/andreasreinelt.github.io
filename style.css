@@ -2,23 +2,66 @@
 
 /* ----- Colors for Menu and Sections ----- */
 :root {
-  --color-about: aliceblue;
-  --color-about-hover: lightblue;
+  /* ---- Basic Light Mode Colours ---- */
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --nav-background: rgba(255, 255, 255, 0.9);
+  --header-height: 150px;
 
-  --color-skills: honeydew;
-  --color-skills-hover: palegreen;
+  /* About (columbia-blue) */
+  --color-about: #d4e6f2;
+  --color-about-hover: #b8d9ed;
 
-  --color-projects: powderblue;
-  --color-projects-hover: paleturquoise;
+  /* Skills (light-cyan) */
+  --color-skills: #d9f2f2;
+  --color-skills-hover: #b8e8e8;
 
-  --color-hospital: lavender;
-  --color-hospital-hover: mediumpurple;
+  /* Projects (rose-quartz) */
+  --color-projects: #f0e8eb;
+  --color-projects-hover: #d3c0c7;
 
-  --color-social: mintcream;
-  --color-social-hover: lightcyan;
+  /* Social Media (cornsilk) */
+  --color-social: #fbf2d3;
+  --color-social-hover: #f5e5a6;
 
-  --color-contact: lightyellow;
-  --color-contact-hover: khaki;
+  /* Hospital (light-cyan) */
+  --color-hospital: #d9f2f2;
+  --color-hospital-hover: #a0dede;
+
+  /* Contact (columbia-blue) */
+  --color-contact: #d4e6f2;
+  --color-contact-hover: #a0cbe5;
+}
+
+/* ---- Dark Mode Colours ---- */
+.dark-mode {
+  --background-color: #181a1b;
+  --text-color: #e8eaed;
+  --nav-background: rgba(35, 39, 46, 0.9);
+
+  /* About (dark columbia-blue) */
+  --color-about: #2a3c4e;
+  --color-about-hover: #3b556e;
+
+  /* Skills (dark light-cyan) */
+  --color-skills: #284545;
+  --color-skills-hover: #3a5f5f;
+
+  /* Projects (dark rose-quartz) */
+  --color-projects: #44363c;
+  --color-projects-hover: #59474e;
+
+  /* Social Media (dark cornsilk) */
+  --color-social: #4f4833;
+  --color-social-hover: #675f42;
+
+  /* Hospital (dark light-cyan) */
+  --color-hospital: #284545;
+  --color-hospital-hover: #3a5f5f;
+
+  /* Contact (dark columbia-blue) */
+  --color-contact: #2a3c4e;
+  --color-contact-hover: #3b556e;
 }
 
 /* ----- Hidden Elements for Language Switch ----- */
@@ -31,17 +74,24 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: white;
-  color: darkslategray;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* ========== Header ========== */
 header {
-  background: rgba(255, 255, 255, 0.9);
-  color: rgb(52, 138, 167);
+  background-color: var(--nav-background);
+  color: #348AA7;
   padding: 20px 0;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+
+  /* Header always on top: */
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 header h1 {
@@ -57,35 +107,34 @@ header p.subtitle {
   font-size: 1.2rem;
 }
 
+/* ---- Navigation Item Colors ---- */
 /* Navigation item backgrounds */
+.nav-menu li a {
+  color: var(--text-color);
+}
+
 .nav-menu li.nav-about a {
   background-color: var(--color-about);
-  color: black;
 }
 
 .nav-menu li.nav-skills a {
   background-color: var(--color-skills);
-  color: black;
 }
 
 .nav-menu li.nav-projects a {
   background-color: var(--color-projects);
-  color: black;
 }
 
 .nav-menu li.nav-hospital a {
   background-color: var(--color-hospital);
-  color: black;
 }
 
 .nav-menu li.nav-social a {
   background-color: var(--color-social);
-  color: black;
 }
 
 .nav-menu li.nav-contact a {
   background-color: var(--color-contact);
-  color: black;
 }
 
 /* Navigation item hover effects */
@@ -111,6 +160,18 @@ header p.subtitle {
 
 .nav-menu li.nav-contact a:hover {
   background-color: var(--color-contact-hover);
+}
+
+.dark-mode .nav-menu li a,
+.dark-mode .nav-menu li.nav-darkmode a {
+  color: #e8eaed;
+}
+
+.dark-mode .nav-menu li a::before,
+.dark-mode .nav-menu li a::after,
+.dark-mode .nav-menu li.nav-darkmode a::before,
+.dark-mode .nav-menu li.nav-darkmode a::after {
+  background-color: #e8eaed;
 }
 
 /* ========== Section Backgrounds ========== */
@@ -139,6 +200,18 @@ header p.subtitle {
 }
 
 /* ========== Card Layout ========== */
+
+.dark-mode .skill-block,
+.dark-mode .project-box {
+  background-color: #2a2f33;
+  color: var(--text-color);
+}
+
+.dark-mode .project-header {
+  background-color: #384045;
+  color: var(--text-color);
+}
+
 .card {
   max-width: 800px;
   margin: 40px auto;
@@ -152,12 +225,16 @@ header p.subtitle {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
+.dark-mode .card:hover {
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
 /* ========== Footer ========== */
 footer {
   margin-top: 20px;
   padding: 15px;
   background: black;
-  color: white;
+  color: #fff;
   text-align: center;
 }
 
@@ -178,6 +255,11 @@ footer a {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header is sticky, so clicking will move behind it. this will fix that and add a little bit of free space above: */
+section {
+  scroll-margin-top: calc(var(--header-height) + 10px);
 }
 
 /* ----- About Section Layout ----- */
@@ -219,9 +301,23 @@ footer a {
   }
 }
 
+@keyframes glowProfileDark {
+  from {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5), 0 0 15px rgba(200, 200, 200, 0.3);
+  }
+
+  to {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.6), 0 0 40px rgba(200, 200, 200, 0.5);
+  }
+}
+
 .profile-image-wrapper:hover {
   animation: glowProfile 2s infinite alternate;
   transform: scale(1.05);
+}
+
+.dark-mode .profile-image-wrapper:hover {
+  animation: glowProfileDark 2s infinite alternate;
 }
 
 /* ----- Hospital Section Content Layout ----- */
@@ -248,19 +344,13 @@ footer a {
   display: block;
 }
 
-@keyframes glowProfile {
-  from {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(128, 128, 128, 0.2);
-  }
-
-  to {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7), 0 0 30px rgba(128, 128, 128, 0.5);
-  }
-}
-
 .hospital-image-wrapper:hover {
   animation: glowProfile 2s infinite alternate;
   transform: scale(1.05);
+}
+
+.dark-mode .hospital-image-wrapper:hover {
+  animation: glowProfileDark 2s infinite alternate;
 }
 
 .hospital-text {
@@ -298,6 +388,14 @@ footer a {
 
 .contact-icons a span {
   font-size: 0.9rem;
+}
+
+.dark-mode .contact a {
+  color: #90caf9;
+}
+
+.dark-mode .contact a:hover {
+  color: #bbdefb;
 }
 
 /* ----- Social Media Content Section Layout ----- */

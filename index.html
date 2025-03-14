@@ -22,6 +22,16 @@
   <!-- Projekte Galerie CSS -->
   <link rel="stylesheet" href="projectsGallery/style.css">
 
+  <!-- DarkMode Toggle Script -->
+  <script src="DarkMode/script.js" defer></script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+  <link rel="shortcut icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Portfolio" />
+  <link rel="manifest" href="/images/site.webmanifest" />
 </head>
 
 <body>
@@ -53,6 +63,14 @@
 
         <li data-lang="de" class="nav-contact"><a href="#contact">Kontakt</a></li>
         <li data-lang="en" class="nav-contact hidden"><a href="#contact">Contact</a></li>
+
+        <li class="nav-darkmode">
+          <a href="#" id="darkmode-toggle" data-text-de-dark="Wechsel zu dunklem Modus"
+            data-text-de-light="Wechsel zu hellem Modus" data-text-en-dark="Switch to dark mode"
+            data-text-en-light="Switch to light mode" title="">
+            🌙
+          </a>
+        </li>
       </ul>
     </nav>
 

@@ -26,35 +26,46 @@
   margin-top: 20px;
 }
 
-.nav-menu li {
-  margin: 0 15px;
-}
-
+/* Hover Effect */
 .nav-menu li a {
   position: relative;
   display: inline-block;
   padding: 5px 10px;
   border-radius: 5px;
   text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
   color: #000;
   background-color: transparent;
 }
 
-/* Hover Effect */
-.nav-menu li a::after {
+/* Line left */
+.nav-menu li a::before {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -3px;
-  width: 0;
-  height: 2px;
+  bottom: 0;
+  width: 2px;
+  height: 0;
   background-color: currentColor;
-  transition: width 0.3s ease;
+  transition: height 0.3s ease;
 }
 
+/* Line right delayed */
+.nav-menu li a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 2px;
+  height: 0;
+  background-color: currentColor;
+  transition: height 0.3s ease;
+  transition-delay: 0.3s;
+}
+
+/* Hover-Effekt */
+.nav-menu li a:hover::before,
 .nav-menu li a:hover::after {
-  width: 100%;
+  height: 100%;
 }
 
 /* Responsive Navigation - Mobile View */
@@ -70,12 +81,12 @@
     left: -250px;
     width: 250px;
     height: 100vh;
-    background: white;
+    background-color: var(--nav-background);
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 0;
-    padding-top: 0;
+    margin: 0;
+    padding: 0;
     transition: left 0.3s ease-in-out;
   }
 
@@ -92,8 +103,22 @@
   .nav-menu li {
     width: 100%;
     text-align: left;
-    padding: 15px;
+    padding: 15px 20px;
     border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+
+  .nav-menu li a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* Responsive Navigation - Desktop View */
+@media (min-width: 769px) {
+  .nav-menu li {
+    margin: 0 15px;
   }
 }
 
@@ -116,6 +141,7 @@
     left: 0;
     opacity: 1;
   }
+
   to {
     left: -250px;
     opacity: 0;
