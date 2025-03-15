@@ -1,3 +1,9 @@
+/* Language Toggle Script
+  provides a language switcher that dynamically updates the content based on the selected language
+  elements have a data-lang attribute
+  will also fire trigger languageChanged to make everything work with the dark mode toggle
+*/
+
 function initLanguageToggle() {
 
   let currentLang = "de";

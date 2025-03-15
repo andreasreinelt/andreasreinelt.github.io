@@ -1,3 +1,8 @@
+/* Navigation Menu Script
+  this is for mobile navigation only (screen size less than 768px)
+  a hamburger menu is shown and this is animated for smooth opening/closing from the side
+*/
+
 function initMenu() {
   const menu = document.querySelector(".nav-menu");
   const menuToggle = document.getElementById("menu-toggle");

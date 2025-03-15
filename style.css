@@ -259,7 +259,7 @@ footer a {
 
 /* Header is sticky, so clicking will move behind it. this will fix that and add a little bit of free space above: */
 section {
-  scroll-margin-top: calc(var(--header-height) + 10px);
+  scroll-margin-top: calc(var(--header-height) + 20px);
 }
 
 /* ----- About Section Layout ----- */
