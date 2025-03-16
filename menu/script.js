@@ -6,11 +6,13 @@
 function initMenu() {
   const menu = document.querySelector(".nav-menu");
   const menuToggle = document.getElementById("menu-toggle");
+  const mainContent = document.getElementById("main-content");
 
   const closeMenu = () => {
     if (menu.classList.contains("open")) {
       menu.classList.remove("open");
       menu.classList.add("closing");
+      mainContent.removeAttribute("inert");
 
       setTimeout(() => {
         menu.classList.remove("closing");
@@ -25,6 +27,8 @@ function initMenu() {
     } else {
       menu.style.display = "flex";
       menu.classList.add("open");
+      // inert to main-content makes the site not useable when the menu is open, so you can just use the menu
+      mainContent.setAttribute("inert", "");
     }
   });
 

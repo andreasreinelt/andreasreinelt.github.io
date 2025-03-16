@@ -81,7 +81,7 @@
 
   </header>
 
-  <main>
+  <main id="main-content">
     <section id="about" class="card about">
       <div class="about-content">
         <div class="about-text">
@@ -118,6 +118,8 @@
             <li>HTML5, CSS3, XML, Tailwind CSS</li>
             <li>JavaScript, TypeScript, SPA (Single Page Application), PWA (Progressive Web App)</li>
             <li>React.js, Angular, Vue.js</li>
+            <li data-lang="de">Adobe/Macromedia Flash (veraltet, früher weit verbreitet)</li>
+            <li data-lang="en" class="hidden">Adobe/Macromedia Flash (obsolete, formerly widely used)</li>
           </ul>
         </div>
         <!-- Backend -->
@@ -127,7 +129,13 @@
           <ul>
             <li>Node.js, Express.js, Koa</li>
             <li>GraphQL, REST APIs, OAuth2</li>
-            <li>SQL (z. B. PostgreSQL), NoSQL (MongoDB, Redis)</li>
+            <li>SQL (z. B. PostgreSQL), NoSQL (MongoDB, Redis)</li>
+            <li data-lang="de">Swift, Xcode (iOS-Entwicklung)</li>
+            <li data-lang="en" class="hidden">Swift, Xcode (iOS Development)</li>
+            <li data-lang="de">Java, Kotlin (Android-Entwicklung)</li>
+            <li data-lang="en" class="hidden">Java, Kotlin (Android Development)</li>
+            <li data-lang="de">Firmware-Modifikation, Custom ROM-Entwicklung für Sony Ericsson und Motorola Handys</li>
+            <li data-lang="en" class="hidden">Firmware Modification, Custom ROM Development for Sony Ericsson and Motorola phones</li>
           </ul>
         </div>
         <!-- Tools & Prozesse -->
@@ -137,12 +145,13 @@
           <ul>
             <li>Git, GitHub, Docker, CI/CD</li>
             <li>Agile Development, Unit Testing, End-to-End Testing, API Integration</li>
-            <li>macOS, Windows, Linux</li>
+            <li data-lang="de">macOS, Windows, Linux, Mobile Betriebssysteme</li>
+            <li data-lang="en" class="hidden">macOS, Windows, Linux, Mobile Operating Systems</li>
           </ul>
         </div>
       </div>
       <p data-lang="de">
-        Aber diese Auflistung ist nur der Anfang – ich bin stets bestrebt, meine Fähigkeiten kontinuierlich zu
+        Aber diese Auflistung ist nur der Anfang – ich bin stets dabei, meine Fähigkeiten kontinuierlich zu
         erweitern, um mich in neue Programmiersprachen und Technologien einzuarbeiten.
       </p>
       <p data-lang="en" class="hidden">
@@ -166,13 +175,13 @@
           <div class="project-gallery">
             <div class="gallery-track">
               <div class="gallery-slide">
-                <img src="images/placay1.png" alt="Placay Screenshot 1">
+                <img src="images/placay1.png" alt="Placay Screenshot 1" loading="lazy">
               </div>
               <div class="gallery-slide">
-                <img src="images/placay2.png" alt="Placay Screenshot 2">
+                <img src="images/placay2.png" alt="Placay Screenshot 2" loading="lazy">
               </div>
               <div class="gallery-slide">
-                <img src="images/placay3.png" alt="Placay Screenshot 3">
+                <img src="images/placay3.png" alt="Placay Screenshot 3" loading="lazy">
               </div>
             </div>
           </div>
@@ -201,15 +210,15 @@
           </div>
           <div class="project-gallery">
             <div class="gallery-track">
-              <img src="images/sellio1.png" alt="Sellio Screenshot 1">
-              <img src="images/sellio2.png" alt="Sellio Screenshot 2">
-              <img src="images/sellio3.png" alt="Sellio Screenshot 3">
+              <img src="images/sellio1.png" alt="Sellio Screenshot 1" loading="lazy">
+              <img src="images/sellio2.png" alt="Sellio Screenshot 2" loading="lazy">
+              <img src="images/sellio3.png" alt="Sellio Screenshot 3" loading="lazy">
             </div>
           </div>
           <div class="project-description">
             <p data-lang="de">
               Verkaufe mühelos deine Second-Hand-Artikel. Diese Plattform vereinfacht den Verkauf gebrauchter Produkte
-              durch ein leistungsstarkes Node.js‑Backend und ein intuitives Frontend. <br>
+              durch ein leistungsstarkes Node.js-Backend und ein intuitives Frontend. <br>
               <strong>Technologien:</strong> Node.js, Express.js, MongoDB, React.js, REST APIs.
             </p>
             <p data-lang="en" class="hidden">
@@ -231,19 +240,19 @@
           </div>
           <div class="project-gallery">
             <div class="gallery-track">
-              <img src="images/weather1.png" alt="Weather Station Screenshot 1">
-              <img src="images/weather2.png" alt="Weather Station Screenshot 2">
-              <img src="images/weather3.png" alt="Weather Station Screenshot 3">
+              <img src="images/weather1.png" alt="Weather Station Screenshot 1" loading="lazy">
+              <img src="images/weather2.png" alt="Weather Station Screenshot 2" loading="lazy">
+              <img src="images/weather3.png" alt="Weather Station Screenshot 3" loading="lazy">
             </div>
           </div>
           <div class="project-description">
             <p data-lang="de">
-              Ein React‑basiertes Dashboard, das Echtzeitdaten einer Netatmo‑Wetterstation anzeigt. Es visualisiert
+              Ein React-basiertes Dashboard, das Echtzeitdaten einer Netatmo-Wetterstation anzeigt. Es visualisiert
               Temperatur, Luftfeuchtigkeit und weitere Umweltdaten. <br>
               <strong>Technologien:</strong> React.js, Vite, Netatmo API, OAuth2, React Router.
             </p>
             <p data-lang="en" class="hidden">
-              A React‑based dashboard that displays real-time data from a Netatmo weather station. It visualizes
+              A React-based dashboard that displays real-time data from a Netatmo weather station. It visualizes
               temperature, humidity and other environmental data. <br>
               <strong>Technologies:</strong> React.js, Vite, Netatmo API, OAuth2, React Router.
             </p>
@@ -266,9 +275,9 @@
           </div>
           <div class="project-gallery">
             <div class="gallery-track">
-              <img src="images/battery1.png" alt="Battery Status Screenshot 1">
-              <img src="images/battery2.png" alt="Battery Status Screenshot 2">
-              <img src="images/battery3.png" alt="Battery Status Screenshot 3">
+              <img src="images/battery1.png" alt="Battery Status Screenshot 1" loading="lazy">
+              <img src="images/battery2.png" alt="Battery Status Screenshot 2" loading="lazy">
+              <img src="images/battery3.png" alt="Battery Status Screenshot 3" loading="lazy">
             </div>
           </div>
           <div class="project-description">
@@ -329,7 +338,8 @@
     <section id="hospital" class="card hospital">
       <div class="hospital-content">
         <div class="hospital-image-wrapper">
-          <img src="images/hospital_profile.jpg" alt="Hospital Profile Image" class="hospital-profile-image">
+          <img src="images/hospital_profile.jpg" alt="Hospital Profile Image" class="hospital-profile-image"
+            loading="lazy">
         </div>
         <div class="hospital-text">
           <h2 data-lang="de">Gesundheits- und Krankenpfleger</h2>

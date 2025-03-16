@@ -79,6 +79,10 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+h2 {
+  margin-top: 0;
+}
+
 /* ========== Header ========== */
 header {
   background-color: var(--nav-background);
@@ -255,6 +259,16 @@ footer a {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.skill-block ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.skill-block li {
+  list-style-position: outside;
+  margin-bottom: 5px;
 }
 
 /* Header is sticky, so clicking will move behind it. this will fix that and add a little bit of free space above: */
