@@ -5,7 +5,7 @@
   /* ---- Basic Light Mode Colours ---- */
   --background-color: #ffffff;
   --text-color: #333333;
-  --nav-background: rgba(255, 255, 255, 0.9);
+  --nav-background: rgba(245, 245, 245, 0.9);
   --header-height: 150px;
 
   /* About (columbia-blue) */
@@ -271,6 +271,22 @@ footer a {
   margin-bottom: 5px;
 }
 
+.skills.card p a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  cursor: pointer;
+}
+
+.skills.card p a:hover {
+  color: #1b7e7e;
+}
+
+.dark-mode .skills.card p a:hover {
+  color: #4db8b8;
+}
+
+
 /* Header is sticky, so clicking will move behind it. this will fix that and add a little bit of free space above: */
 section {
   scroll-margin-top: calc(var(--header-height) + 20px);
@@ -404,8 +420,16 @@ section {
   font-size: 0.9rem;
 }
 
+.contact a {
+  color: #348AA7;
+}
+
 .dark-mode .contact a {
   color: #90caf9;
+}
+
+.contact a:hover {
+  color: #5daed0;
 }
 
 .dark-mode .contact a:hover {

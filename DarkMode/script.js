@@ -6,6 +6,7 @@
 function initDarkMode() {
   const toggle = document.getElementById('darkmode-toggle');
   const languageToggle = document.getElementById('language-toggle');
+  const themeColorMeta = document.querySelector('meta[name="theme-color"]');
 
   function updateDarkModeUI() {
     const currentLang = languageToggle.getAttribute('data-current-lang') || 'de';
@@ -22,6 +23,10 @@ function initDarkMode() {
       : (currentLang === 'de' ? 'Dunkler Modus' : 'Dark Mode');
 
     toggle.innerHTML = (isDark ? '💡' : '🌙') + ` <span class="darkmode-label">${labelText}</span>`;
+
+    if (themeColorMeta) {
+      themeColorMeta.setAttribute('content', isDark ? '#23272e' : '#ffffff');
+    }
   }
 
   function setDarkMode(isDark) {

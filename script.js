@@ -25,4 +25,19 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("load", updateHeaderHeight);
   window.addEventListener("resize", updateHeaderHeight);
 
+  /* There are two links in the text to direcly toogle language and dark mode, this is how I make them work: */
+  document.querySelectorAll('#link-toggle-language').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.getElementById('language-toggle').click();
+    });
+  });
+
+  document.querySelectorAll('#link-toggle-darkmode').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.getElementById('darkmode-toggle').click();
+    });
+  });
+
 });

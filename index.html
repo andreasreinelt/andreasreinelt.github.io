@@ -7,23 +7,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Andreas Reinelt - Software Engineer</title>
 
-  <!-- Global Style File & Main Script to start the others -->
+  <!-- Global Style File -->
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-
+  
   <!-- Main Menu Style and Script for small screens -->
   <link rel="stylesheet" href="menu/style.css">
   <script src="menu/script.js" defer></script>
-
+  
   <!-- toggleLanguage Button Style and Script -->
   <link rel="stylesheet" href="toggleLanguage/style.css">
   <script src="toggleLanguage/script.js" defer></script>
-
+  
   <!-- Projekte Galerie CSS -->
   <link rel="stylesheet" href="projectsGallery/style.css">
-
+  
   <!-- DarkMode Toggle Script -->
   <script src="DarkMode/script.js" defer></script>
+  
+  <!-- Main Script to start the others -->
+  <script src="script.js" defer></script>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96" />
@@ -32,12 +34,17 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="Portfolio" />
   <link rel="manifest" href="/images/site.webmanifest" />
+
+  <!-- Status Bar colours for all plattforms, will be changed with DarkMode, last is for old Windows Phone and Edge -->
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 </head>
 
 <body>
   <header>
     <h1>Andreas Reinelt</h1>
-    <p class="subtitle">Software Engineer | Full Stack Developer</p>
+    <p data-lang="de" class="subtitle">Softwareentwickler | Full-Stack-Entwickler</p>
+    <p data-lang="en" class="nav-about hidden subtitle">Software Engineer | Full Stack Developer</p>
 
     <!-- Navigation -->
     <nav>
@@ -89,12 +96,12 @@
           <h2 data-lang="en" class="hidden">About Me</h2>
           <p data-lang="de">
             Technologie begeistert mich seit jeher. Nach meiner Karriere im Gesundheitswesen habe ich meine Leidenschaft
-            für Softwareentwicklung zum Beruf gemacht. Ich entwickle moderne, skalierbare Webanwendungen mit 
+            für Softwareentwicklung zum Beruf gemacht. Ich entwickle moderne, skalierbare Webanwendungen mit
             JavaScript, TypeScript, React.js und Node.js und vielen mehr!
           </p>
           <p data-lang="en" class="hidden">
             Technology has always fascinated me. After my career in healthcare, I turned my passion for software
-            development into a profession. I develop modern, scalable web applications using 
+            development into a profession. I develop modern, scalable web applications using
             JavaScript, TypeScript, React.js and Node.js and many more!
           </p>
         </div>
@@ -133,8 +140,10 @@
             <li data-lang="en" class="hidden">Swift, Xcode (iOS Development)</li>
             <li data-lang="de">Java, Kotlin (Android-Entwicklung)</li>
             <li data-lang="en" class="hidden">Java, Kotlin (Android Development)</li>
-            <li data-lang="de">Firmware-Modifikation &amp; Custom ROM-Entwicklung für Sony Ericsson und Motorola Handys</li>
-            <li data-lang="en" class="hidden">Firmware Modification &amp; Custom ROM Development for Sony Ericsson and Motorola phones</li>
+            <li data-lang="de">Firmware-Modifikation &amp; Custom ROM-Entwicklung für Sony Ericsson und Motorola Handys
+            </li>
+            <li data-lang="en" class="hidden">Firmware Modification &amp; Custom ROM Development for Sony Ericsson and
+              Motorola phones</li>
           </ul>
         </div>
         <!-- Tools & Prozesse -->
@@ -157,13 +166,27 @@
         But this list is just the beginning – I am always ready to continuously expand my skills to master new
         programming languages and technologies.
       </p>
+      <p data-lang="de">
+        Einige dieser Kenntnisse habe ich direkt auf dieser Webseite angewendet – probiere sie doch gerne einmal aus! 
+        Über die Knöpfe oben (oder direkt hier) kannst du beispielsweise 
+        <a href="#" id="link-toggle-language">die Sprache wechseln</a> oder 
+        <a href="#" id="link-toggle-darkmode">zwischen dunklem und hellem Modus umschalten</a>.
+      </p>
+      
+      <p data-lang="en" class="hidden">
+        I've applied some of these skills right here on this website – feel free to try them out!
+        Using the buttons at the top (or these direct links), you can for example 
+        <a href="#" id="link-toggle-language">switch languages</a> or 
+        <a href="#" id="link-toggle-darkmode">toggle between dark and light mode</a>.
+      </p>
+      
     </section>
 
     <section id="projects" class="card projects">
       <h2 data-lang="de">Berufserfahrung</h2>
       <h2 data-lang="en" class="hidden">Work</h2>
       <div class="projects-grid">
-        
+
         <!-- Projekt 1: Placay -->
         <div class="project-box">
           <div class="project-header">
@@ -301,6 +324,42 @@
             </a>
           </div>
         </div>
+
+        <!-- Projekt 5: Webseite der Pfadfinder -->
+        <div class="project-box">
+          <div class="project-header">
+            <a href="https://www.dpsg-brilon.de" target="_blank">
+              <span data-lang="de">Webseite der Pfadfinder</span>
+              <span data-lang="en" class="hidden">Scouts Website</span>
+            </a>
+          </div>
+          <div class="project-gallery">
+            <div class="gallery-track">
+              <img src="images/scouts1.png" alt="Pfadfinder Webseite Screenshot 1" loading="lazy">
+              <img src="images/scouts2.png" alt="Pfadfinder Webseite Screenshot 2" loading="lazy">
+              <img src="images/scouts3.png" alt="Pfadfinder Webseite Screenshot 3" loading="lazy">
+            </div>
+          </div>
+          <div class="project-description">
+            <p data-lang="de">
+              Seit 2008 betreue ich die Webseite der DPSG-Pfadfinder in Brilon. Mittlerweile übernehmen jüngere
+              Pfadfinder die aktive Pflege der Seite, während ich unterstützend im Hintergrund tätig bin.<br>
+              <strong>Technologien:</strong> HTML, CSS, JavaScript, Responsive Design
+            </p>
+            <p data-lang="en" class="hidden">
+              Since 2008, I have maintained the DPSG scouts' website in Brilon. Currently, younger scouts actively
+              manage the website, while I provide support in the background. <br>
+              <strong>Technologies:</strong> HTML, CSS, JavaScript, Responsive Design
+            </p>
+          </div>
+          <div class="project-footer">
+            <a href="https://www.dpsg-brilon.de" target="_blank">
+              <span data-lang="de">Webseite besuchen</span>
+              <span data-lang="en" class="hidden">Visit Website</span>
+            </a>
+          </div>
+        </div>
+
       </div>
     </section>
 
